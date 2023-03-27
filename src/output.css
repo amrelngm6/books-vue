@@ -797,6 +797,12 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .lg\:grid {
     display: grid;
   }

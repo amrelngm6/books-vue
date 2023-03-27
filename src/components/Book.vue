@@ -3,7 +3,7 @@
 
         <div class="p-6" >
         
-            <div v-if="activeBook.id" class="flex gap gap-4 w-full  my-6 " >
+            <div v-if="activeBook.id" class="lg:flex gap gap-4 w-full  my-6 " >
                 <span><img :src="$parent.getImagePath(activeBook)" class="w-64 h-auto rounded-lg cover"></span>
                 <div class="w-full py-6 "> 
                     <span class="text-2xl font-semibold" :title="activeBook.title" v-text="activeBook.title"></span>
@@ -18,7 +18,7 @@
                         </span>
                     </div>
 
-                    <hr />
+                    <hr /> 
                     <div class="py-4 flex w-full gap gap-2">
                         <span class="text-gray-400">Languages: </span>
                         <span class="text-md gap gap-2 flex" :key="lang_index" v-for="(lang, lang_index) in activeBook.languages" >
@@ -27,9 +27,9 @@
                     </div>
 
                     <hr />
-                    <div class="py-4 flex w-full gap gap-6">
+                    <div class="py-4 lg:flex block w-full gap gap-6">
                         <span class="text-gray-400">Subjects: </span>
-                        <span class="text-md gap gap-6 flex" :key="subject_index" v-for="(subject, subject_index) in activeBook.subjects" >
+                        <span class="text-md gap gap-6 " :key="subject_index" v-for="(subject, subject_index) in activeBook.subjects" >
                             <span class="font-semibold hover:text-red-600" v-text="subject"></span>
                         </span>
                     </div>
