@@ -1,10 +1,10 @@
 <template>
     <div class="w-full">
         <div class=" bg-gray-600 pb-2 lg:px-6 px-2 w-full flex ">
-            <img src="./img/logo.png" class="p-4 lg:w-auto w-40">
+            <img src="./img/logo.png" class="lg:px-4 lg:py-4 py-6 px-2 lg:w-auto w-40">
 
             <div class="w-full flex gap gap-4 pb-4 pt-6" > 
-                <input v-model="searchValue" @keyup="search" placeholder="Looking for a book" type="text" class="float-right rounded-lg border-gray-400 bg-white p-2 mx-6" name="search">
+                <input v-model="searchValue" @keyup="search" placeholder="Looking for a book" type="text" class="float-right rounded-lg border-gray-400 bg-white p-2 lg:mx-6 mx-2" name="search">
             </div>
         </div> 
 
@@ -14,7 +14,7 @@
 
         <div v-if="!isBookPage">
             <div class="w-full flex  p-6">
-                <h1 class="w-full text-2xl" v-text="title"></h1>
+                <h1 class="w-full lg:text-2xl text-md" v-text="title"></h1>
                 <div class="w-full mt-4 flex gap gap-2 w-40">
                     <a @click="changeLayout('grid')" href="javascript:;" class="float-right"><img width="30" src="./img/grid.png" /></a>
                     <a @click="changeLayout('list')" href="javascript:;"><img width="30" src="./img/list.png" /></a>
@@ -37,7 +37,7 @@
                 <div v-else class="flex gap gap-4 w-full  my-6 " :key="index" v-for="(book, index) in booksList">
                     <a @click="bookPage(book.id)"  href="javascript:;"><img :src="getImagePath(book)" class="w-48 h-auto rounded-lg cover"></a>
                     <div class="w-full py-6 "> 
-                        <a @click="bookPage(book.id)"  href="javascript:;" class="text-2xl font-semibold" :title="book.title" v-text="book.title.substring(0, 350)"></a>
+                        <a @click="bookPage(book.id)"  href="javascript:;" class=" lg:text-2xl text-md font-semibold" :title="book.title" v-text="book.title.substring(0, 350)"></a>
                         <p class="py-2 text-md gap gap-2 flex" :key="author_index" v-for="(author, author_index) in book.authors" >
                             <span v-text="author.name"></span>
                             <span class="font-semibold" v-text="author.death_year"></span>
