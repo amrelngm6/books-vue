@@ -13,6 +13,6 @@ http://medianssolutions.com/genwin
 
 - npm install
 
-- npm run serve   // Run the APP
+- npm run serve   				// Run the APP
 
-- npm run build   // Build the APP 
+- npm run build   				// Build the APP 
