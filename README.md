@@ -3,6 +3,11 @@
 Built with Vue JS & TailwindCSS
 
 
+# Live Demo
+
+This is test demo for quick testing 
+http://medianssolutions.com/genwin
+
 
 # Commands
 
