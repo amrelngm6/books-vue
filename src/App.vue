@@ -1,7 +1,7 @@
 <template>
     <div class="w-full">
-        <div class=" bg-gray-600 pb-2 px-6 w-full flex ">
-            <img src="./img/logo.png" class="p-4">
+        <div class=" bg-gray-600 pb-2 lg:px-6 px-2 w-full flex ">
+            <img src="./img/logo.png" class="p-4 lg:w-auto w-40">
 
             <div class="w-full flex gap gap-4 pb-4 pt-6" > 
                 <input v-model="searchValue" @keyup="search" placeholder="Looking for a book" type="text" class="float-right rounded-lg border-gray-400 bg-white p-2 mx-6" name="search">
@@ -23,8 +23,7 @@
 
             <div class="block p-6" v-if="booksList.length && !loading">
 
-                <div v-if="layout && layout == 'grid' "  class="auto-cols-min grid grid-cols-4">
-
+                <div v-if="layout && layout == 'grid' "  class="auto-cols-min lg:grid md:grid lg:grid-cols-4 md:grid-cols-2  ">
                     <div :key="index" v-for="(book, index) in booksList">
                         <div v-if="index < 20" class=" text-center h-full mb-6">
                             <a @click="bookPage(book.id)" href="javascript:;" class="h-full"><img :src="getImagePath(book)" class="cover mx-auto w-48 h-auto rounded-lg"></a>
